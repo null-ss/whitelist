@@ -1,0 +1,15 @@
+system = {}
+whitelists = {
+	ac34905uauilha23b4njj3o2a948hbal4bb43b44b33b4b = 'ac34905uauilha23b4njj3o2a948hbal4bb43b44b33b4b',
+	['ac34905uauilhbn43va90pj4323lib4un23o498h234234'] = 'ac34905uauilhbn43va90pj4323lib4un23o498h234234',
+}
+
+function system.wlSys(textbox)
+	local enter = textbox.Enter
+	enter.MouseButton1Click:Connect(function()
+		if whitelists[textbox.Text] then print('Key is valid ✅') else warn('Key is invalid! ❎')
+		end
+	end)
+end
+
+return system
